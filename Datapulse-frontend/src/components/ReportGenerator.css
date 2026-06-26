@@ -1,0 +1,163 @@
+/* Report Generator Styles */
+
+.report-generator {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 2rem;
+  margin-top: 2rem;
+}
+
+.report-header {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.report-icon {
+  width: 64px;
+  height: 64px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  color: white;
+  flex-shrink: 0;
+}
+
+.report-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.report-subtitle {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  margin: 0.5rem 0 0 0;
+}
+
+/* Report Content Preview */
+.report-content-preview {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.report-content-preview h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0 0 1rem 0;
+}
+
+.report-features {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 0.75rem;
+}
+
+.report-features li {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  padding: 0.5rem 0;
+}
+
+/* Actions */
+.report-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+}
+
+.download-buttons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+}
+
+.btn-download {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.875rem 1.75rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: none;
+}
+
+.btn-download:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.btn-word {
+  background: linear-gradient(135deg, #2b5797 0%, #1e3a5f 100%);
+  color: white;
+}
+
+.btn-word:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(43, 87, 151, 0.4);
+}
+
+.btn-pdf {
+  background: linear-gradient(135deg, #dc2626 0%, #991b1b 100%);
+  color: white;
+}
+
+.btn-pdf:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(220, 38, 38, 0.4);
+}
+
+/* Spinner animation */
+.spin {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+.report-info {
+  margin-top: 1rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .report-header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .report-features {
+    grid-template-columns: 1fr;
+  }
+
+  .download-buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .btn-download {
+    width: 100%;
+    justify-content: center;
+  }
+}
